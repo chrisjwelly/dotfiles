@@ -33,3 +33,10 @@ set cc=81
 
 " For no delay when doing <esc>O
 set noesckeys
+
+" Custom Aliases
+
+" For Java
+ia psv public static void
+ia kattin static Kattio kattio = new Kattio(System.in);
+ia iju import java.util
