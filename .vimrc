@@ -55,3 +55,8 @@ Plug 'scrooloose/nerdtree'
 
 " Initialize plugin system
 call plug#end()
+
+" NERDTree
+map <C-l> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
