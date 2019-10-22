@@ -42,8 +42,15 @@ ia sopf System.out.printf
 ia kattin static Kattio io = new Kattio(System.in);
 ia iju import java.util
 
+" Java compiling inside vim
+autocmd Filetype java set makeprg=javac\ %
+set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
+map <F9> :make<Return>:copen<Return>
+map <F10> :cprevious<Return>
+map <F11> :cnext<Return>
 
-" Plugins
+
+" vim-plug Plugins
 
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
@@ -52,6 +59,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
 
 " Initialize plugin system
 call plug#end()
