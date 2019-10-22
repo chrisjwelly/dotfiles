@@ -41,3 +41,17 @@ ia psv public static void
 ia sopf System.out.printf
 ia kattin static Kattio io = new Kattio(System.in);
 ia iju import java.util
+
+
+" Plugins
+
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+
+" Initialize plugin system
+call plug#end()
