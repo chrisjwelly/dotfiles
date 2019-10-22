@@ -38,5 +38,6 @@ set noesckeys
 
 " For Java
 ia psv public static void
-ia kattin static Kattio kattio = new Kattio(System.in);
+ia sopf System.out.printf
+ia kattin static Kattio io = new Kattio(System.in);
 ia iju import java.util
