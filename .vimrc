@@ -34,9 +34,14 @@ set cc=81
 " For no delay when doing <esc>O
 set noesckeys
 
-" Custom Aliases
+" Split navigations
+" Maps Ctrl-<Direction> as if moving between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-" For Java
+" Java aliases
 ia psv public static void
 ia sopf System.out.printf
 ia kattin static Kattio io = new Kattio(System.in);
@@ -49,6 +54,7 @@ map <F9> :make<Return>:copen<Return>
 map <F10> :cprevious<Return>
 map <F11> :cnext<Return>
 
+" Python
 
 " vim-plug Plugins
 
@@ -60,11 +66,12 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
 
 " NERDTree
-map <C-l> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
