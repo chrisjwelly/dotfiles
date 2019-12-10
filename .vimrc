@@ -67,6 +67,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
+Plug 'tpope/vim-rails'
+" To preview markdown files
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Initialize plugin system
 call plug#end()
@@ -75,3 +78,7 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"For vim-markdown-preview
+let vim_markdown_preview_github=1
+let vim_markdown_preview_browser='Mozilla Firefox'
