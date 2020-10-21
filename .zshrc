@@ -11,6 +11,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/chrisjwelly/.oh-my-zsh"
 export CURRENT_SEM="$HOME/Documents/school/y3/y3s1"
+# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -111,6 +112,39 @@ source $ZSH/oh-my-zsh.sh
 alias curr="cd $CURRENT_SEM"
 alias flmns="cd ~/fluminus_cli"
 alias dlflmns="mix fluminus --download-to=$CURRENT_SEM --show-errors"
+alias recordscr="ffmpeg -f avfoundation -i "1" -pix_fmt yuv420p -r 1 $HOME/Desktop/E0324077.mp4"
+
+# Y3S1
+alias 2104="cd $CURRENT_SEM/CS2104"
+alias cs2104="cd $CURRENT_SEM/CS2104"
+alias 2214="cd $CURRENT_SEM/MA2214"
+alias MA2214="cd $CURRENT_SEM/MA2214"
+alias 4243="cd $CURRENT_SEM/CS4243"
+alias cs4243="cd $CURRENT_SEM/CS4243"
+alias 3216="cd $CURRENT_SEM/CS3216"
+alias cs3216="cd $CURRENT_SEM/CS3216"
+alias fp="cd $CURRENT_SEM/CS3216/fp"
+alias 3244="cd $CURRENT_SEM/CS3244"
+alias cs3244="cd $CURRENT_SEM/CS3244"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f "/Users/chrisjwelly/.ghcup/env" ] && source "/Users/chrisjwelly/.ghcup/env" # ghcup-env
+
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
