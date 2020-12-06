@@ -70,6 +70,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-rails'
 " To preview markdown files
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'wakatime/vim-wakatime'
 
 " Initialize plugin system
 call plug#end()
